@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Resume</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-----------Javascript start------------>
+
+  <script  defer>
+    const buttons =  document.querySelectorAll("[data-carousel-button]")
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1
+        const slides = button
+        .closest("[data-carousel]")
+        .querySelector("[data-slides]")
+
+        const activeSlide = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
+
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
+
+      })
+    })
+  </script>
+
+</head>
+<body>
+
+  <picture>
+    <source media="(min-width: 650px)" srcset="images/profile-pic-small.jpg">
+    <source media="(man-width: 1400px)" srcset="images/profile-pic-mid.jpg">
+    
+  </picture>
+
+  <!---hero section start--->
+
+  <div class="hero">
+    <nav>
+      <h2 class="logo">Re<span>sume</span></h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about me">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experiance</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#get in touch">Get in touch</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <h4>Hello, my name is</h4>
+      <h1>Britney <span>Nenwalwi</span></h1>
+      <h3>I'm a Web Developer.</h3>
+      <div class="newsletter">
+        <form>
+          <input type="email" name="email" id="mail" placeholder="Enter your Email">
+          <input type="submit" name="submit" value="Lets start">
+        </form>
+
+      </div>
+      </div>
+  </div>
+
+
+  <!------About section start------>
+
+  <section class="about">
+    <div class="main">
+      <img src="images/profile-pic-mid.jpg">
+      <div class="about-text">
+        <h2 id="about me">About Me</h2>
+        <h5><span>Developer</span> & Designer</h5>
+        <p>I am a web developer.I can also make your website more interesting by adding some animations .A responsive design makes your website accesible to all users, regardless of their device.</p>
+        <button type="button">Lets Talk</button>
+      </div>
+    </div>
+  </section>
+
+   <!----education section start---->
+
+   <div class="education">
+    <div class="title">
+      <h2 id="education">Education</h2>
+    </div>
+
+    <div class="box" >
+      <div class="card">
+        
+        <h5>Intro to web at CodeSpace Academy</h5>
+          <div class="pra">
+            <p>I'm currently studying web development and design at Codespace Academy. Soon i'll be doing Javascript.To learn more click the link below.</p>
+            <p style="text-align: center;">
+              <a class="button"  href =" https://www.codespace.co.za/"     target="_blank">Read More</a>
+            
+            </p>
+          </div>
+      </div>
+      <div class="card">
+        <h5>2015-2019</h5>
+          <div class="pra">
+            <p>i was studying at Marude secondary school. I passed my matric with a bachelor in 2019 .
+             Used to get award every year for being the top achiver.Participated in everything related to leveraging my knowledge.</p>
+          </div>
+      </div>
+
+      <div class="card">
+        <h5>2020-2021</h5>
+          <div class="pra">
+            <p>Took a gap year trying to figure out what am i gonna study until i came across web development</p>
+
+            <h5>2022</h5>
+          <div class="pra">
+            <p>I'm studying Software engineering at CodeSpace Academy.
+
+            </p>
+          </div>
+      </div> 
+
+    </div>
+  </div>
+
+
+  <!----Experience---->
+
+  <div class="experience">
+    <div class="title">
+   <h2 id="experience"><span>Exper</span>ience</h2>
+   </div>
+
+<h5>Introduction in web development</h5>
+<ul>
+  <li>currently learning it at CodeSpace Academy </li>
+  <h3>Introduction to java</h3>
+  <li>I have a month of learning java </li>
+  <h3>Others</h3>
+  <li> I also did statistics,i have a little bit of knowledge in statistics  </li>
+  <li>And also Calculus</li>
+</ul>
+</div>
+
+<div class="language">
+  <div class="title">
+<h2 id="language">Langu<span>ages</span></h2>
+</div>
+
+<ul>
+  <li> Tshivenda </li>
+  <li>Sepedi </li>
+  <li> English </li>
+  <li> Currently learning xitsonga </li>
+</ul>
+</div>
+
+<div class="skills">
+  <div class="title">  
+<h2 id="skills">Sk<span>ill</span>s</h2>
+</div>
+
+  <p>
+    <ul>
+        <li>Time management</li>
+        <li>Proactive problem solver</li>
+        <li>Team work</li>
+        <li>Communicator with strong listening and writting skills</li>
+        <li>Excellent at providing help</li>
+    </ul>
+  </p>
+  </div>
+
+   </id>
+
+  
+
+  <!------carousel------->
+
+
+  <div  class="carousel " data-carousel>
+     <button class="carousel-button prev" data-carousel-button ="prev">&#8656;</button>
+    <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+
+  
+      <ul data-slides >
+        <li class="slide" data-active>
+        <img src="https://img.icons8.com/ios/2x/java-coffee-cup-logo.png" class="d-block w-25" alt="Java java-coffee-cup-logo">
+        </li>
+
+        <li class="slide">
+          <img src="https://img.icons8.com/ios-filled/2x/css3.png" class="d-block w-25" alt="Css icon">
+        </li>
+        
+      
+      <li class="slide">
+        <img src="https://img.icons8.com/ios-filled/2x/html-5.png" class="d-block w-25" alt="html icon">
+      </li>
+    
+    
+    </ul>
+  </div>
+  </div>
+  
+
+   <!-----footer start----->
+   <footer>
+    <h3 id="get in touch">Get in touch</h3>
+    <p>For more info you can contact me</p>
+    <div class="social">
+      <a href="http://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="http://www.linkedIn.com" target="_blank"><i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+  </footer>
+ 
+
+</body>
+</html>
