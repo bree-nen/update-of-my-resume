@@ -105,7 +105,7 @@ h4{
   width: 550px;
 }
 .main{
-  width: 1130px;
+  width: screenwidth;
   max-width: 95%;
   margin: 0 auto;
   display: flex;
@@ -149,13 +149,13 @@ button:hover{
 }
 .education{
   background: #101010;
-  width: 100%;
+  width: screenwidth;
   padding: 100px 0px;
 }
 .title h2{
   color: white;
   font-size: 75px;
-  width: 1130px;
+  width: screenwidth;
   margin: 30px auto;
   text-align: center;
 }
@@ -205,20 +205,20 @@ h5{
 .experience{
   background: #191919;
   border-radius: 70px;
-  width: 100%;
+  width: screenwidth;
   padding: 100px 0px;
   color: white;
-  width: 1130px;
+  width: screenwidth;
   margin: 30px auto;
   text-align: center;
 }
 .language{
   background: #191919;
   border-radius: 70px;
-  width: 100%;
+  width: screenwidth;
   padding: 100px 0px;
   color: white;
-  width: 1130px;
+  width: screenwidth;
   margin: 30px auto;
   text-align: center;
 }
@@ -228,13 +228,13 @@ h5{
   
   padding: 100px 0px;
   color: white;
-  width: 1130px;
+  width: screenwidth;
   margin: 30px auto;
   text-align: center;
 }
 footer{
   position: relative;
-  width: 100%;
+  width: screenwidth;
   height: 400px;
   background: #101010;
   display: flex;
@@ -283,7 +283,7 @@ footer p:nth-child(2){
   background: #191919;
   border-radius: 50px;
   padding: 100px 0px;
-  width: 1130px;
+  width: screenwidth;
   height: 70vh;
   margin: 30px auto;
   text-align: center;
